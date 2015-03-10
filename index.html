@@ -20,19 +20,20 @@
         $('.lines').append(
           $('<option></option>').val(name).html(name));
         console.log(data.lines)
+        // console.log(line)
       });
     });
     // $('.lines').change(function() {
     //   var line = $("select option:selected").val();
-    //   var url = "http://transportapi.com/v3/uk/tube/lines" + name + "?api_key=8ffc3fa2097e12ebc6d4939d74f746cd";
+    //   var url = "http://transportapi.com/v3/uk/tube/" + line + "?api_key=8ffc3fa2097e12ebc6d4939d74f746cd";
     //   $.ajax({
     //     url: url,
     //     dataType: 'json',
     //   }).done(function(data) {
-    //     $('.status').text(data.status);
-    //       console.log(data.status)
-      });
-    });
+    //     $('.status').text(data);
+    //       console.log(data)
+    //   });
+    // });
 
 
 
