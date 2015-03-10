@@ -19,21 +19,23 @@
       $.each(data.lines, function(name) {
         $('.lines').append(
           $('<option></option>').val(name).html(name));
-        console.log(data.lines)
+        // console.log(lines)
         // console.log(line)
       });
     });
-    // $('.lines').change(function() {
-    //   var line = $("select option:selected").val();
-    //   var url = "http://transportapi.com/v3/uk/tube/" + line + "?api_key=8ffc3fa2097e12ebc6d4939d74f746cd";
-    //   $.ajax({
-    //     url: url,
-    //     dataType: 'json',
-    //   }).done(function(data) {
-    //     $('.status').text(data);
-    //       console.log(data)
-    //   });
-    // });
+    $('.lines').change(function() {
+      var name = $("select option:selected").val();
+      var url = "http://transportapi.com/v3/uk/tube/lines.json?api_key=d9307fd91b0247c607e098d5effedc97&app_id=03bf8009";
+      $.ajax({
+        url: url,
+        dataType: 'json',
+      }).done(function(data) {
+        $.each(data.lines, function(index, name) {
+        $('.status').html(name.status);
+          console.log(data)
+        });
+      });
+    });
 
 
 
