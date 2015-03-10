@@ -6,19 +6,26 @@
   </head>
   <body>
    <h1>Tube App</h1>
-   <select class="lines ⌄">
+   <select class="lines">
      <option>Select Line</option>
    </select>
    <span class="status"></span>
+   <br>
+    <select class="start">
+     <option>Start Station</option>
+   </select>
+    <select class="destination">
+     <option>Destination</option>
+   </select>
    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
    <script>
     $.ajax({
       dataType: 'json',
       url: "http://transportapi.com/v3/uk/tube/lines.json?api_key=d9307fd91b0247c607e098d5effedc97&app_id=03bf8009",
     }).done(function(data) {
-      $.each(data.lines, function(index, name) {
+      $.each(data.lines, function(name) {
         $('.lines').append(
-          $('<option></option>').val(name.friendly_name).html(name.friendly_name));
+          $('<option></option>').val(name).html(name));
       });
     });
     $('.lines').change(function() {
@@ -33,6 +40,21 @@
         });
       });
     });
+    $('.lines').change(function() {
+      var name = $("select option:selected").val();
+      var url = "http://transportapi.com/v3/uk/tube/" + name + ".json?api_key=d9307fd91b0247c607e098d5effedc97&app_id=03bf8009";
+      $.ajax({
+        url: url,
+        dataType: 'json',
+      }).done(function(data) {
+        $.each(data.stations, function(index, title) {
+          $('.start').append(
+            $('<option></option>').val(title.name).html(title.name));
+          console.log(data.stations)
+        });
+      })
+    });
+
    </script>
   </body>
 </html>
