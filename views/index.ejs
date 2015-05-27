@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="tube">
   <head>
     <meta charset="utf-8" />
     <script src="public/bower_components/jquery/dist/jquery.js"></script>
+    <script src="public/bower_components/angular/angular.min.js"></script>
     <script src="public/js/tube.js"></script>
+    <script src="public/app.js"></script>
+    <script src="public/js/tubeController.js"></script>
     <title>Tube App</title>
   </head>
-  <body>
+  <body ng-controller="tubeController as tube">
    <h1>Tube App</h1>
-   <select class="lines">
-     <option>Select Line</option>
-   </select>
-   <span class="status"></span>
-   <br>
-    <select class="start">
-     <option>Start Station</option>
-   </select>
-    <select class="destination">
-     <option>Destination</option>
-   </select>
+    <div class="lines" ng-repeat="line in tube.lines">
+      <p>{{ line.friendly_name }}: {{ line.status }}</p>
+    </div>
   </body>
 </html>
