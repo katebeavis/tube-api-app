@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="public/css/reset.css"/>
     <script src="public/bower_components/jquery/dist/jquery.js"></script>
     <script src="public/bower_components/angular/angular.min.js"></script>
+    <script src="public/bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="public/js/tube.js"></script>
     <script src="public/app.js"></script>
     <script src="public/js/tubeController.js"></script>
     <title>Tube App</title>
   </head>
   <body ng-controller="tubeController as tube">
-   <h1>Tube App</h1>
     <div class="lines" ng-repeat="line in tube.lines">
       <p>{{ line.friendly_name }}: {{ line.status }}</p>
     </div>
