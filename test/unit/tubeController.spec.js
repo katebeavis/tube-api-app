@@ -10,8 +10,6 @@ describe('tubeController', function() {
                     }
   }));
 
-
-
   it('initialises with a list of tube lines', function() {
     expect(ctrl.lines).toBeDefined();
   });
