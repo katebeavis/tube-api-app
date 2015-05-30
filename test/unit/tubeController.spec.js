@@ -13,4 +13,12 @@ describe('tubeController', function() {
   it('initialises with a list of tube lines', function() {
     expect(ctrl.lines).toBeDefined();
   });
+
+  it('initialises with tube names', function() {
+    expect(ctrl.bakerloo.friendly_name).toEqual('Bakerloo')
+  });
+
+  it('initialises with tube statuses', function() {
+    expect(ctrl.bakerloo.status).toEqual('Good Service')
+  });
 });

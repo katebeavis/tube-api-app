@@ -14,10 +14,17 @@
   </head>
   <body ng-controller="tubeController as tube">
     <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)">
-      <p class="lines">{{ line.friendly_name }}: {{ line.status }}</p>
+      <p class="lines">{{ line.friendly_name }}: </p><p class="status">{{ line.status }}</p>
     </div>
     <div ng-repeat="station in tube.stations">
       <p class="stations">{{ station.name }}</p>
+    </div>
+    <div class="time" ng-show="tube.times">
+      <p>Duration: {{ tube.times }}</p>    </div>
+    <div class="results" ng-repeat="route in tube.routes">
+    <p>Mode: {{ route.mode }}</p>
+    <p>To: {{ route.to_point_name }}</p>
+    <p>To: {{ route.duration }}</p>
     </div>
   </body>
 </html>
