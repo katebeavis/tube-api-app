@@ -45,20 +45,3 @@ app.controller('tubeController', function($http) {
     });
   };
 });
-
-// http://transportapi.com/v3/uk/public/journey/from/lonlat:-0.17636700000002747,51.496715/to/lonlat:-0.1418899999999894,51.501364.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
