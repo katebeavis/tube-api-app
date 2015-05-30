@@ -1,1 +1,1 @@
-var app = angular.module('tube', []);
+var app = angular.module('tube', ['google.places']);

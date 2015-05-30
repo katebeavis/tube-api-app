@@ -24,16 +24,41 @@ app.controller('tubeController', function($http) {
   };
 
   self.journeyPlanner = function() {
-    self.start = self.start.replace(/ /g,'+');
-    self.end = self.end.replace(/ /g,'+');
-    console.log(self.start);
-    console.log(self.end);
-      $http.get('http://transportapi.com/v3/uk/public/journey/from/postcode:' + self.start + '/to/postcode:' + self.end + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
+    self.startlon = self.start.geometry.location.F;
+    self.startlat = self.start.geometry.location.A;
+    self.endlon = self.end.geometry.location.F;
+    self.endlat = self.end.geometry.location.A;
+    console.log(self.startlon);
+    console.log(self.startlat);
+    console.log(self.endlon);
+    console.log(self.endlat);
+      $http.get('http://transportapi.com/v3/uk/public/journey/from/lonlat:' + self.startlon + ',' + self.startlat + '/to/lonlat:' + self.endlon + ',' + self.endlat + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
       .success(function(data) {
       self.times = data.routes[0].duration;
       self.routes = data.routes[0].route_parts;
       self.start = null;
       self.end = null;
+      self.startlon = null;
+      self.startlat = null;
+      self.endlon = null;
+      self.endlat = null;
     });
   };
 });
+
+// http://transportapi.com/v3/uk/public/journey/from/lonlat:-0.17636700000002747,51.496715/to/lonlat:-0.1418899999999894,51.501364.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
