@@ -8,14 +8,6 @@ app.controller('tubeController', function($http) {
     self.lines = data.lines;
   });
 
-  $http.get('http://transportapi.com/v3/uk/public/journey/from/postcode:nw63pn/to/postcode:NW36LU.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
-  .success(function(data) {
-    self.times = data.routes[0].duration;
-    self.routes = data.routes[0].route_parts;
-    console.log(self.times);
-    console.log(self.routes);
-  });
-
   self.lines = [];
 
   self.showStations = function(line) {
@@ -30,5 +22,19 @@ app.controller('tubeController', function($http) {
       self.stations = data.stations;
     });
   };
+
+  self.journeyPlanner = function() {
+    self.start = self.start.replace(/ /g,'+');
+    self.end = self.end.replace(/ /g,'+');
+    console.log(self.start);
+    console.log(self.end);
+    $http.get('http://transportapi.com/v3/uk/public/journey/from/postcode:' + self.start + '/to/postcode:' + self.end + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
+    .success(function(data) {
+    self.times = data.routes[0].duration;
+    self.routes = data.routes[0].route_parts;
+    self.start = null;
+    self.end = null;
+  });
+};
 
 });

@@ -19,12 +19,19 @@
     <div ng-repeat="station in tube.stations">
       <p class="stations">{{ station.name }}</p>
     </div>
+    <div>
+      <form class="form">
+        From: <input type="text" placeholder="postcode" ng-model="tube.start" class="start">
+        To: <input type="text" placeholder="postcode" ng-model="tube.end" class="end">
+        <input type="submit" value="submit" ng-click="tube.journeyPlanner()" class="button">
+      </form>
+    </div>
     <div class="time" ng-show="tube.times">
-      <p>Duration: {{ tube.times }}</p>    </div>
+      <p>Duration: {{ tube.times }}</p>
+    </div>
     <div class="results" ng-repeat="route in tube.routes">
     <p>Mode: {{ route.mode }}</p>
     <p>To: {{ route.to_point_name }}</p>
-    <p>To: {{ route.duration }}</p>
     </div>
   </body>
 </html>
