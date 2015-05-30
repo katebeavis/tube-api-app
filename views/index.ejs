@@ -16,8 +16,8 @@
     <title>Tube App</title>
   </head>
   <body ng-controller="tubeController as tube">
-    <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)">
-      <p class="lines">{{ line.friendly_name }}: </p><p class="status">{{ line.status }}</p>
+    <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)" class="lines">
+      <p>{{ line.friendly_name }}: </p><p class="status">{{ line.status }}</p>
     </div>
     <div ng-repeat="station in tube.stations">
       <p class="stations">{{ station.name }}</p>

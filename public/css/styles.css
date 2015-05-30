@@ -1,3 +1,52 @@
 .lines {
+  color: white;
   font-weight: bold;
+}
+
+.lines:nth-child(1) {
+  background-color: #894e24;
+}
+
+.lines:nth-child(2) {
+  background-color: #dc241f;
+}
+
+.lines:nth-child(3) {
+  background-color: #ffce00;
+}
+
+.lines:nth-child(4) {
+  background-color: #007229;
+}
+
+.lines:nth-child(5) {
+  background-color: #00afad;
+}
+
+.lines:nth-child(6) {
+  background-color: #d799af;
+}
+
+.lines:nth-child(7) {
+  background-color: #6a7278;
+}
+
+.lines:nth-child(8) {
+  background-color: #751056;
+}
+
+.lines:nth-child(9) {
+  background-color: black;
+}
+
+.lines:nth-child(10) {
+  background-color: #0019a8;
+}
+
+.lines:nth-child(11) {
+  background-color: #00a0e2;
+}
+
+.lines:nth-child(12) {
+  background-color: #76d0bd;
 }
