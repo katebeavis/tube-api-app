@@ -28,13 +28,12 @@ app.controller('tubeController', function($http) {
     self.end = self.end.replace(/ /g,'+');
     console.log(self.start);
     console.log(self.end);
-    $http.get('http://transportapi.com/v3/uk/public/journey/from/postcode:' + self.start + '/to/postcode:' + self.end + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
-    .success(function(data) {
-    self.times = data.routes[0].duration;
-    self.routes = data.routes[0].route_parts;
-    self.start = null;
-    self.end = null;
-  });
-};
-
+      $http.get('http://transportapi.com/v3/uk/public/journey/from/postcode:' + self.start + '/to/postcode:' + self.end + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
+      .success(function(data) {
+      self.times = data.routes[0].duration;
+      self.routes = data.routes[0].route_parts;
+      self.start = null;
+      self.end = null;
+    });
+  };
 });
