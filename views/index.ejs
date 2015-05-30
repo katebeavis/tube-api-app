@@ -30,8 +30,7 @@
       <p>Duration: {{ tube.times }}</p>
     </div>
     <div class="route" ng-repeat="route in tube.routes">
-    <p>Mode: {{ route.mode }}</p>
-    <p>To: {{ route.to_point_name }}</p>
+    <p>By {{ route.mode }} to {{ route.to_point_name }}</p>
     </div>
   </body>
 </html>

@@ -7,7 +7,7 @@ describe('tubeController', function() {
     ctrl = $controller('tubeController');
     ctrl.bakerloo = { friendly_name: "Bakerloo",
                       status: "Good Service"
-                    }
+                    };
   }));
 
   it('initialises with a list of tube lines', function() {
@@ -15,10 +15,10 @@ describe('tubeController', function() {
   });
 
   it('initialises with tube names', function() {
-    expect(ctrl.bakerloo.friendly_name).toEqual('Bakerloo')
+    expect(ctrl.bakerloo.friendly_name).toEqual('Bakerloo');
   });
 
   it('initialises with tube statuses', function() {
-    expect(ctrl.bakerloo.status).toEqual('Good Service')
+    expect(ctrl.bakerloo.status).toEqual('Good Service');
   });
 });
