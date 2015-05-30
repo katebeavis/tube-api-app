@@ -1,6 +1,6 @@
 # Tube App
 
-Tube app is a one page app that uses the TransportAPI. The user is able to check the status of their chosen underground line, and the time taken to travel from one station to another.
+Tube app is a one page app that uses the Transport API. The user is able to check the status of their chosen underground line, and the time taken to travel from one station to another.
 
 Currently in progress.
 
@@ -8,6 +8,8 @@ Currently in progress.
 To get experience of using another api and create an app that would have real world value.
 
 ## Technology
-- jQuery
+- AngularJS
+- Transport API
+- Google Places Autocomplete API
 - HTML
 - CSS
