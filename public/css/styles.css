@@ -1,6 +1,26 @@
+body {
+  font-family: londonTube;
+}
+
 @font-face {
   font-family: londonTube;
   src: url(London-tube.ttf);
+}
+
+header {
+  background-color: #2d3039;
+}
+
+header li{
+  display: inline-block;
+  padding: 20px;
+  color: white;
+  font-family: londonTube;
+}
+
+header li a {
+  text-decoration: none;
+  color: white;
 }
 
 .lines {

@@ -16,6 +16,13 @@
     <title>Tube App</title>
   </head>
   <body ng-controller="tubeController as tube">
+    <header>
+      <ul>
+        <li>Plan a journey</li>
+        <li>Status updates</li>
+        <li><a href="https://github.com/katebeavis/tube-api-app" target="blank">Github</a></li>
+      </ul>
+    </header>
     <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)" class="lines">
       <p>{{ line.friendly_name }}: {{ line.status }}</p>
     </div>
