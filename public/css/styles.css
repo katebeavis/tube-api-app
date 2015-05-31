@@ -1,6 +1,14 @@
+@font-face {
+  font-family: londonTube;
+  src: url(London-tube.ttf);
+}
+
 .lines {
   color: white;
-  font-weight: bold;
+  width: 30%;
+  font-family: londonTube;
+  padding: 20px;
+  margin-bottom: 2px;
 }
 
 .lines:nth-child(1) {
