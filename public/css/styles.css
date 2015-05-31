@@ -23,6 +23,16 @@ header li a {
   color: white;
 }
 
+.map {
+ width: 55%;
+ height: 55%;
+ display: inline-block;
+ float: right;
+ position: relative;
+ top: 100px;
+ right: 65px;
+}
+
 .lines {
   color: white;
   width: 30%;
@@ -31,50 +41,50 @@ header li a {
   margin-bottom: 2px;
 }
 
-.lines:nth-child(1) {
+.lines:nth-child(3) {
   background-color: #894e24;
 }
 
-.lines:nth-child(2) {
+.lines:nth-child(4) {
   background-color: #dc241f;
 }
 
-.lines:nth-child(3) {
+.lines:nth-child(5) {
   background-color: #ffce00;
 }
 
-.lines:nth-child(4) {
+.lines:nth-child(6) {
   background-color: #007229;
 }
 
-.lines:nth-child(5) {
+.lines:nth-child(7) {
   background-color: #00afad;
 }
 
-.lines:nth-child(6) {
+.lines:nth-child(8) {
   background-color: #d799af;
 }
 
-.lines:nth-child(7) {
+.lines:nth-child(9) {
   background-color: #6a7278;
 }
 
-.lines:nth-child(8) {
+.lines:nth-child(10) {
   background-color: #751056;
 }
 
-.lines:nth-child(9) {
+.lines:nth-child(11) {
   background-color: black;
 }
 
-.lines:nth-child(10) {
+.lines:nth-child(12) {
   background-color: #0019a8;
 }
 
-.lines:nth-child(11) {
+.lines:nth-child(13) {
   background-color: #00a0e2;
 }
 
-.lines:nth-child(12) {
+.lines:nth-child(14) {
   background-color: #76d0bd;
 }

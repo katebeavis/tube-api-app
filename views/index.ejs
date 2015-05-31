@@ -23,6 +23,9 @@
         <li><a href="https://github.com/katebeavis/tube-api-app" target="blank">Github</a></li>
       </ul>
     </header>
+    <div class="image">
+      <img ng-src="public/imgs/tubemap.jpg" alt="Tube map" class="map"/>
+    </div>
     <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)" class="lines">
       <p>{{ line.friendly_name }}: {{ line.status }}</p>
     </div>
