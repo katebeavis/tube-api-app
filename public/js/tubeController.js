@@ -9,7 +9,6 @@ app.controller('tubeController', function($http) {
   });
 
   self.lines = [];
-  self.list = false;
 
   self.showStations = function(line) {
     if (line.friendly_name === 'Hammersmith & City') {
@@ -22,7 +21,7 @@ app.controller('tubeController', function($http) {
       .success(function(data) {
       self.stations = data.stations;
     });
-      self.lines = true;
+      self.lines = false;
   };
 
   self.journeyPlanner = function() {
