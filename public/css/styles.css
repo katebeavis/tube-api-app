@@ -56,7 +56,7 @@ header li a {
   border-bottom: 1px solid #DEDEDE;
 }
 
-#main ul li.line-button{
+#main ul li.line-button {
   background-color: #204293;
   position: relative;
   top: 35px;
@@ -67,11 +67,11 @@ header li a {
   text-align: center;
 }
 
-#main ul li.line-button a{
+#main ul li.line-button a {
   color: white;
 }
 
-#main ul li.station-button{
+#main ul li.station-button {
   background-color: #204293;
   display: inline-block;
   position: absolute;
@@ -85,8 +85,18 @@ header li a {
   text-align: center;
 }
 
-#main ul li.station-button{
+#main ul li.station-button a {
   color: white;
+}
+
+.message {
+  position: relative;
+  top: 8px;
+  left: 180px;
+  display: inline-block;
+  width: 30%;
+  font-family: londonTube;
+  font-size: 18px;
 }
 
 .map {

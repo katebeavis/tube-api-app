@@ -33,7 +33,8 @@
     </div>
     <ul>
       <li class="line-button"><a href="/">Lines</a></li>
-      <li class="station-button">Stations</li>
+      <li class="station-button"><a href="" ng-click="showme=true">Stations</a></li>
+      <li class="message" ng-show="showme">Click a line to see stations</li>
     </ul>
     <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)"  class="lines">
       <p>{{ line.friendly_name }}: {{ line.status }}</p>
