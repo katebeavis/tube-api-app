@@ -8,8 +8,10 @@ body {
   src: url(London-tube.ttf);
 }
 
+/*NAV*/
+
 header {
-  background-color: #2d3039;
+  background-color: rgba(45, 48, 57, 1);
 }
 
 header ul {
@@ -39,6 +41,10 @@ header li{
 header li a {
   text-decoration: none;
   color: white;
+}
+
+header li:hover{
+  background-color: #204293;
 }
 
 #main {
