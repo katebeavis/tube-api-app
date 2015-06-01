@@ -57,7 +57,7 @@ header li a {
 }
 
 #main ul li.line-button {
-  background-color: #204293;
+  background-color: rgba(32, 66, 147, 1);
   position: relative;
   top: 35px;
   width: 5%;
@@ -69,10 +69,19 @@ header li a {
 
 #main ul li.line-button a {
   color: white;
+  text-decoration: none;
+}
+
+#main ul li.line-button a:hover{
+  text-decoration: underline;
+}
+
+#main ul li.line-button:hover{
+  background-color: black;
 }
 
 #main ul li.station-button {
-  background-color: #204293;
+  background-color: rgba(32, 66, 147, 1);
   display: inline-block;
   position: absolute;
   left: 180px;
@@ -87,6 +96,15 @@ header li a {
 
 #main ul li.station-button a {
   color: white;
+  text-decoration: none;
+}
+
+#main ul li.station-button a:hover{
+  text-decoration: underline;
+}
+
+#main ul li.station-button:hover{
+  background-color: black;
 }
 
 .message {
