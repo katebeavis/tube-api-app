@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="public/bower_components/angular-google-places-autocomplete/src/autocomplete.css">
     <script src="public/bower_components/jquery/dist/jquery.js"></script>
     <script src="public/bower_components/angular/angular.min.js"></script>
+    <script src="public/bower_components/angular-route/angular-route.js"></script>
     <script src="public/bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script src="public/bower_components/angular-google-places-autocomplete/src/autocomplete.js"></script>
@@ -26,35 +27,6 @@
         <li class="github-header"><a href="https://github.com/katebeavis/tube-api-app" target="blank">Github</a></li>
       </ul>
     </header>
-    <div id="main">
-    <h1>STATUS UPDATES & TUBE INFO</h1>
-    <div class="image">
-      <img ng-src="public/imgs/tubemap.jpg" alt="Tube map" class="map"/>
-    </div>
-    <ul>
-      <li class="line-button"><a href="/">Lines</a></li>
-      <li class="station-button"><a href="" ng-click="showme=true">Stations</a></li>
-      <li class="message" ng-show="showme">Click a line to see stations</li>
-    </ul>
-    <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)"  class="lines">
-      <p>{{ line.friendly_name }}: {{ line.status }}</p>
-    </div>
-    <div ng-repeat="station in tube.stations">
-      <p class="stations">{{ station.name }}</p>
-    </div>
-    <div>
-      <form class="form">
-        From: <input type="text" placeholder="Choose from autocomplete" g-places-autocomplete ng-model="tube.start" class="start" style="width:150px;">
-        To: <input type="text" placeholder="Choose from autocomplete" g-places-autocomplete ng-model="tube.end" class="end" style="width:150px;">
-        <input type="submit" value="submit" ng-click="tube.journeyPlanner()" class="button">
-      </form>
-    </div>
-    <div class="time" ng-show="tube.times">
-      <p>Duration: {{ tube.times }}</p>
-    </div>
-    <div class="route" ng-repeat="route in tube.routes">
-    <p>By {{ route.mode }} {{ route.line_name }} to {{ route.to_point_name }}</p>
-    </div>
-    </div>
+      <div ng-view></div>
   </body>
 </html>
