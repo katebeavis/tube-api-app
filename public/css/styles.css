@@ -1,5 +1,6 @@
 body {
   font-family: londonTube;
+  width: 100%;
 }
 
 @font-face {
@@ -11,8 +12,25 @@ header {
   background-color: #2d3039;
 }
 
+header ul {
+  border-bottom: 3px solid black;
+}
+
+div.logo {
+  background-color: #204293;
+  position: absolute;
+  left: 20px;
+  width: 5%;
+  padding: 20px;
+  color: white;
+  font-family: londonTube;
+  text-align: center;
+}
+
 header li{
   display: inline-block;
+  position: relative;
+  left: 120px;
   padding: 20px;
   color: white;
   font-family: londonTube;
@@ -20,6 +38,54 @@ header li{
 
 header li a {
   text-decoration: none;
+  color: white;
+}
+
+#main {
+  margin: 0 auto;
+  width: 85%;
+}
+
+#main h1 {
+  position: relative;
+  top: 20px;
+  font-family: londonTube;
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+#main ul li.line-button{
+  background-color: #204293;
+  position: relative;
+  top: 35px;
+  width: 5%;
+  padding: 10px;
+  font-family: londonTube;
+  color: white;
+  text-align: center;
+}
+
+#main ul li.line-button a{
+  color: white;
+}
+
+#main ul li.station-button{
+  background-color: #204293;
+  display: inline-block;
+  position: absolute;
+  left: 180px;
+  top: 140px;
+  float: right;
+  width: 5%;
+  padding: 10px;
+  font-family: londonTube;
+  color: white;
+  text-align: center;
+}
+
+#main ul li.station-button{
   color: white;
 }
 
@@ -31,60 +97,75 @@ header li a {
  position: relative;
  top: 100px;
  right: 65px;
+ box-shadow: 5px 5px 5px 5px #888888;
 }
 
 .lines {
+  position: relative;
+  top: 60px;
   color: white;
   width: 30%;
+  height: 100%;
   font-family: londonTube;
   padding: 20px;
   margin-bottom: 2px;
 }
 
-.lines:nth-child(3) {
+.lines:nth-child(4) {
   background-color: #894e24;
 }
 
-.lines:nth-child(4) {
+.lines:nth-child(5) {
   background-color: #dc241f;
 }
 
-.lines:nth-child(5) {
+.lines:nth-child(6) {
   background-color: #ffce00;
 }
 
-.lines:nth-child(6) {
+.lines:nth-child(7) {
   background-color: #007229;
 }
 
-.lines:nth-child(7) {
+.lines:nth-child(8) {
   background-color: #00afad;
 }
 
-.lines:nth-child(8) {
+.lines:nth-child(9) {
   background-color: #d799af;
 }
 
-.lines:nth-child(9) {
+.lines:nth-child(10) {
   background-color: #6a7278;
 }
 
-.lines:nth-child(10) {
+.lines:nth-child(11) {
   background-color: #751056;
 }
 
-.lines:nth-child(11) {
+.lines:nth-child(12) {
   background-color: black;
 }
 
-.lines:nth-child(12) {
+.lines:nth-child(13) {
   background-color: #0019a8;
 }
 
-.lines:nth-child(13) {
+.lines:nth-child(14) {
   background-color: #00a0e2;
 }
 
-.lines:nth-child(14) {
+.lines:nth-child(15) {
   background-color: #76d0bd;
+}
+
+.stations {
+  position: relative;
+  top: 60px;
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+  margin-bottom: 2px;
+  border: 1px solid #DEDEDE;
+  font-family: londonTube;
 }

@@ -17,16 +17,25 @@
   </head>
   <body ng-controller="tubeController as tube">
     <header>
+      <div class="logo">
+        <p>TUBE</p>
+      </div>
       <ul>
         <li>Plan a journey</li>
         <li>Status updates</li>
         <li><a href="https://github.com/katebeavis/tube-api-app" target="blank">Github</a></li>
       </ul>
     </header>
+    <div id="main">
+    <h1>STATUS UPDATES & TUBE INFO</h1>
     <div class="image">
       <img ng-src="public/imgs/tubemap.jpg" alt="Tube map" class="map"/>
     </div>
-    <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)" class="lines">
+    <ul>
+      <li class="line-button"><a href="/">Lines</a></li>
+      <li class="station-button">Stations</li>
+    </ul>
+    <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)"  class="lines">
       <p>{{ line.friendly_name }}: {{ line.status }}</p>
     </div>
     <div ng-repeat="station in tube.stations">
@@ -44,6 +53,7 @@
     </div>
     <div class="route" ng-repeat="route in tube.routes">
     <p>By {{ route.mode }} {{ route.line_name }} to {{ route.to_point_name }}</p>
+    </div>
     </div>
   </body>
 </html>
