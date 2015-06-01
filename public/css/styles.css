@@ -130,8 +130,8 @@ header li:hover{
  display: inline-block;
  float: right;
  position: relative;
- top: 100px;
- right: 65px;
+ top: 180px;
+ right: 35px;
  box-shadow: 5px 5px 5px 5px #888888;
 }
 
@@ -181,6 +181,51 @@ input[type=submit]:hover {
   background-color: #1A3576;
 }
 
+.results {
+  position: relative;
+  top: 100px;
+  left: 600px;
+  display: inline-block;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.results p {
+  display: inline-block;
+}
+
+.total-time {
+  margin-bottom: 5px;
+  font-style: italic;
+  color: #7A7A7A;
+}
+
+.time-title {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px dotted #7A7A7A;
+}
+
+.mode {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.tube-line {
+  background-color: #204293;
+  padding: 3px;
+  font-weight: bold;
+  color: white;
+}
+
+.destination {
+  font-weight: bold;
+}
+
 .lines {
   position: relative;
   top: 60px;
@@ -209,35 +254,35 @@ input[type=submit]:hover {
 }
 
 .lines:nth-child(8) {
-  background-color: #00afad;
-}
-
-.lines:nth-child(9) {
   background-color: #d799af;
 }
 
-.lines:nth-child(10) {
+.lines:nth-child(9) {
   background-color: #6a7278;
 }
 
-.lines:nth-child(11) {
+.lines:nth-child(10) {
   background-color: #751056;
 }
 
-.lines:nth-child(12) {
+.lines:nth-child(11) {
   background-color: black;
 }
 
-.lines:nth-child(13) {
+.lines:nth-child(12) {
   background-color: #0019a8;
 }
 
+.lines:nth-child(13) {
+  background-color: #008ec9;
+}
+
 .lines:nth-child(14) {
-  background-color: #00a0e2;
+  background-color: #76d0bd;
 }
 
 .lines:nth-child(15) {
-  background-color: #76d0bd;
+  background-color: #00afad;
 }
 
 .stations {
