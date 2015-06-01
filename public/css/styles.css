@@ -18,7 +18,7 @@ header ul {
   border-bottom: 3px solid black;
 }
 
-div.logo {
+div.logo a{
   background-color: #204293;
   position: absolute;
   left: 20px;
@@ -27,6 +27,7 @@ div.logo {
   color: white;
   font-family: londonTube;
   text-align: center;
+  text-decoration: none;
 }
 
 header li{
@@ -132,6 +133,52 @@ header li:hover{
  top: 100px;
  right: 65px;
  box-shadow: 5px 5px 5px 5px #888888;
+}
+
+/*FORM*/
+
+
+div.journey-planner{
+  position: relative;
+  top: -600px;
+}
+
+p.journey-title {
+  position: relative;
+  left: 538px;
+  padding: 15px 10px 15px 10px;
+  display: inline-block;
+  font-size: 50px;
+  font-family: londonTube;
+  color: white;
+  background-color: rgba(45, 48, 57, 1);
+  margin: 0 auto;
+}
+
+.journey-planner input{
+  position: relative;
+  top: 50px;
+  left: 550px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: londonTube;
+  font-size: 16px;
+  box-shadow:inset 1px 1px 3px 0px #DEDEDE;
+  background: #fff;
+}
+
+input[type=submit] {
+  background-color: #204293;
+  padding: 10px 153px 10px 153px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 16px;
+  color: white;
+  box-shadow: none;
+}
+
+input[type=submit]:hover {
+  background-color: #1A3576;
 }
 
 .lines {
