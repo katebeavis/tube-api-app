@@ -8,16 +8,16 @@ It is a single page Angular app built on an express server which utilises partia
 
 ##Heroku & Screenshots
 ###[Tube App](https://kate-tubeapp.herokuapp.com)
-Due to CORS issues with the api which couldn't be resolved by adding headers to the server, a Chrome plugin must be installed to run this app in the browser:
+Due to CORS issues with the api which couldn't be resolved by adding headers to the server, a Chrome plugin must be installed to run this app in the browser when being served remotely:
 [CORS Extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en)
 <div align="center">
   <img width="90%" src="public/imgs/main-page.png">
 </div>
 <div>
-  <img width="45%" src="public/imgs/autocomplete-planner.png">
+  <img width="40%" src="public/imgs/autocomplete-planner.png">
 </div>
 <div>
-  <img width="45%" src="public/imgs/journey-results.png">
+  <img width="40%" src="public/imgs/journey-results.png">
 </div>
 
 ##Technology
