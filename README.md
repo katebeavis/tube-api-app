@@ -13,11 +13,9 @@ Due to CORS issues with the api which couldn't be resolved by adding headers to 
 <div align="center">
   <img width="90%" src="public/imgs/main-page.png">
 </div>
-<div>
-  <img width="40%" src="public/imgs/autocomplete-planner.png">
-</div>
-<div>
-  <img width="40%" src="public/imgs/journey-results.png">
+<div align="center">
+  <img width="45%" src="public/imgs/autocomplete-planner.png">
+  <img width="45%" src="public/imgs/journey-results.png">
 </div>
 
 ##Technology
