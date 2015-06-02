@@ -42,7 +42,6 @@ visit http://localhost:3000
 
 ##To Run Tests
 ```
-$ webdriver-manager start
 $ karma start test/karma.conf.js (To run unit tests)
 $ protractor test/conf.js (To run Protractor tests)
 ```

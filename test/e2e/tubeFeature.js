@@ -19,6 +19,8 @@ describe('tube', function() {
   });
 
   it('displays input boxes for a user to enter postcodes', function() {
+    element.all(by.css('.plan-header')).get(0)
+    .click();
     expect(element.all(by.css('.start')).get(0).isDisplayed()).toEqual(true);
     expect(element.all(by.css('.end')).get(0).isDisplayed()).toEqual(true);
   });
