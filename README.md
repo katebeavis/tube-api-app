@@ -2,7 +2,7 @@
 # Tube App
 Tube app utilises the transport api in order to display the current status of London Underground lines. Users can click on a line to see what stations are on that particular line.
 
-Users are also able to plan their journey by entering start and end points to their journey and getting a suggested public transport route in return. This feature uses the Google Places autocomplete api, from which I extracted the longitide and latitude coordinates before inserting them into a GET request.
+Users are also able to plan their journey by entering start and end points to their journey and getting a suggested public transport route in return. This feature uses the Google Places autocomplete api, from which the longitide and latitude coordinates are extracted before being inserted into a GET request.
 
 It is a single page Angular app built on an express server which utilises partials to give the feel of a multi page website.
 
