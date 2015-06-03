@@ -1,34 +1,33 @@
 <div id="main">
-<h1>STATUS UPDATES & TUBE INFO</h1>
-<ul>
-  <li class="line-button"><a href="/#/" ng-click="tube.hideStations(); showStationList=false">Lines</a></li>
-  <li class="station-button"><a href="" ng-click="showme=true">Stations</a></li>
-  <li class="message" ng-show="showme">Click a line to see stations</li>
-</ul>
-<div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)"  class="lines-planner">
-  <p>{{ line.friendly_name }}: {{ line.status }}</p>
-</div>
-<div ng-repeat="station in tube.stations" nghide="showStationList">
-  <p class="stations">{{ station.name }}</p>
-</div>
+  <h1>STATUS UPDATES & TUBE INFO</h1>
+  <ul>
+    <li class="line-button"><a href="/#/" ng-click="tube.hideStations(); showStationList=false">Lines</a></li>
+    <li class="station-button"><a href="" ng-click="showme=true">Stations</a></li>
+    <li class="message" ng-show="showme">Click a line to see stations</li>
+  </ul>
+  <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)"  class="lines-planner">
+    <p>{{ line.friendly_name }}: {{ line.status }}</p>
+  </div>
+  <div ng-repeat="station in tube.stations" nghide="showStationList">
+    <p class="stations">{{ station.name }}</p>
+  </div>
   <div class="journey-planner">
-  <p class="journey-title">PLAN A JOURNEY</p>
-  <form class="form">
-    <input type="text" placeholder="FROM" g-places-autocomplete ng-model="tube.start" class="start" style="height:25px; width:400px;">
-    <br/>
-    <input type="text" placeholder="TO" g-places-autocomplete ng-model="tube.end" class="end" style="height:25px; width:400px;">
-    <br/>
-    <input type="submit" value="Plan my journey" ng-click="tube.journeyPlanner()" class="button">
-  </form>
-
-<div class="results">
-    <div class="time" ng-show="tube.times">
-      <p class="total-time">Total time</p><br/>
-      <p class="time-title">{{ tube.times }}</p>
-    </div>
-    <div class="route" ng-repeat="route in tube.routes">
-      <p class="mode">{{ route.mode }}</p> <p class="tube-line">{{ route.line_name }}</p> to </p><p class="destination">{{ route.to_point_name }}</p>
+    <p class="journey-title">PLAN A JOURNEY</p>
+    <form class="form">
+      <input type="text" placeholder="FROM" g-places-autocomplete ng-model="tube.start" class="start" style="height:25px; width:400px;">
+      <br/>
+      <input type="text" placeholder="TO" g-places-autocomplete ng-model="tube.end" class="end" style="height:25px; width:400px;">
+      <br/>
+      <input type="submit" value="Plan my journey" ng-click="tube.journeyPlanner()" class="button">
+    </form>
+    <div class="results">
+      <div class="time" ng-show="tube.times">
+        <p class="total-time">Total time</p><br/>
+        <p class="time-title">{{ tube.times }}</p>
+      </div>
+      <div class="route" ng-repeat="route in tube.routes">
+        <p class="mode">{{ route.mode }}</p> <p class="tube-line">{{ route.line_name }}</p> to </p><p class="destination">{{ route.to_point_name }}</p>
+      </div>
     </div>
   </div>
-</div>
 </div>

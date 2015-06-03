@@ -1,16 +1,15 @@
 <div id="main">
-<h1>STATUS UPDATES & TUBE INFO</h1>
+  <h1>STATUS UPDATES & TUBE INFO</h1>
   <div ng-include="'/public/partials/map.ejs'"></div>
-<ul>
-  <li class="line-button"><a href="/#/" ng-click="tube.hideStations(); showStationList=false">Lines</a></li>
-  <li class="station-button"><a href="" ng-click="showme=true">Stations</a></li>
-  <li class="message" ng-show="showme">Click a line to see stations</li>
-</ul>
-<div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)"  class="lines">
-  <p>{{ line.friendly_name }}: {{ line.status }}</p>
-</div>
-<div ng-repeat="station in tube.stations" nghide="showStationList">
-  <p class="stations">{{ station.name }}</p>
-</div>
-
+    <ul>
+      <li class="line-button"><a href="/#/" ng-click="tube.hideStations(); showStationList=false">Lines</a></li>
+      <li class="station-button"><a href="" ng-click="showme=true">Stations</a></li>
+      <li class="message" ng-show="showme">Click a line to see stations</li>
+    </ul>
+  <div ng-repeat="line in tube.lines" ng-click="tube.showStations(line)"  class="lines">
+    <p>{{ line.friendly_name }}: {{ line.status }}</p>
+  </div>
+  <div ng-repeat="station in tube.stations" nghide="showStationList">
+    <p class="stations">{{ station.name }}</p>
+  </div>
 </div>

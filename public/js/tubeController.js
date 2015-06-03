@@ -14,12 +14,12 @@ app.controller('tubeController', function($http) {
     if (line.friendly_name === 'Hammersmith & City') {
       var name = 'hammersmith';
     } else if (line.friendly_name === "Waterloo & City") {
-        var name = 'waterlooandcity';
-      } else {
-    var name = line.friendly_name.toLowerCase(); }
-    $http.get('http://transportapi.com/v3/uk/tube/' + name + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
+      var name = 'waterlooandcity';
+    } else {
+      var name = line.friendly_name.toLowerCase(); }
+      $http.get('http://transportapi.com/v3/uk/tube/' + name + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
       .success(function(data) {
-      self.stations = data.stations;
+        self.stations = data.stations;
     });
       self.lines = false;
   };
@@ -37,10 +37,6 @@ app.controller('tubeController', function($http) {
     self.startlat = self.start.geometry.location.A;
     self.endlon = self.end.geometry.location.F;
     self.endlat = self.end.geometry.location.A;
-    console.log(self.startlon);
-    console.log(self.startlat);
-    console.log(self.endlon);
-    console.log(self.endlat);
       $http.get('http://transportapi.com/v3/uk/public/journey/from/lonlat:' + self.startlon + ',' + self.startlat + '/to/lonlat:' + self.endlon + ',' + self.endlat + '.json?api_key=8ffc3fa2097e12ebc6d4939d74f746cd&app_id=7d46342d')
       .success(function(data) {
       self.times = data.routes[0].duration;
